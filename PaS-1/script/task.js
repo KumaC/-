@@ -81,6 +81,7 @@ function Scene(ctx){
     //这个方法用来向画布中添加飞船
     this.append = function(spaceship){
         this.display[spaceship.mark].add(spaceship);
+        console.log(spaceship)
         this.draw(spaceship);
     }
     
@@ -194,7 +195,6 @@ function Scene(ctx){
     if(ctx){
         var that = this;
         (function sceneLoop(){
-            alert(1)
             that.crashCheck();
             var data = that.update();
             that.render(data);
@@ -284,7 +284,7 @@ function Spaceship(mark){
                 bodyW = 40,
                 bodyH = 20,
                 width = headR + bodyW,
-                height = headR
+                height = headR;
             return{
                 x : x,
                 y : y,
@@ -381,13 +381,13 @@ function Spaceship(mark){
         }
     }
     
-    //飞船结构
-    this.structure = this.createStructure(this.mark);
-    
     //信号处理系统属性
     this.lastActionSignal = null;
     this.mark = mark;
     this.state = 'launched';
+    
+    //飞船结构
+    this.structure = this.createStructure();
     
     //动力系统属性
     this.angularVelocity = 0.003 / this.mark;
