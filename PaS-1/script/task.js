@@ -81,7 +81,6 @@ function Scene(ctx){
     //这个方法用来向画布中添加飞船
     this.append = function(spaceship){
         this.display[spaceship.mark].add(spaceship);
-        console.log(spaceship)
         this.draw(spaceship);
     }
     
