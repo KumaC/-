@@ -390,7 +390,6 @@ function Spaceship(mark) {
 
 /* -------------------------------------------程序初始化------------------------------------------ */
 function init() {
-	alert(1)
 	var container = $('#container'); //获取根容器
 	createUniverse(container); //生成宇宙背景
 	createControlBoard(container); //生成控制中心操作面板
