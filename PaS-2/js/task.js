@@ -32,38 +32,25 @@ function createPlanet(ctx) {
 //这个函数用来生成控制中心操作界面
 function createControlBoard(container) {
 	var controlBoard = $('<div></div>');
-	for (let i=0; i<4; i++) {
-		
-	}
-	//控制面板代码
-	var controlBoardCode = `
-        <button class = 'launch-btn' name = '1'>发射飞船进入1轨道</button>
-        <button class = 'launch-btn' name = '2'>发射飞船进入2轨道</button>
-        <button class = 'launch-btn' name = '3'>发射飞船进入3轨道</button>
-        <button class = 'launch-btn' name = '4'>发射飞船进入4轨道</button><br>
-        
-        <span class = 'note'>1轨道飞船：</span>
-        <button class = 'move-btn' name = '1'>开始飞行</button>
-        <button class = 'stop-btn' name = '1'>停止飞行</button>
-        <button class = 'destroy-btn' name = '1'>销毁</button><br>
-        
-        <span class = 'note'>2轨道飞船：</span>
-        <button class = 'move-btn' name = '2'>开始飞行</button>
-        <button class = 'stop-btn' name = '2'>停止飞行</button>
-        <button class = 'destroy-btn' name = '2'>销毁</button><br>
-        
-        <span class = 'note'>3轨道飞船：</span>
-        <button class = 'move-btn' name = '3'>开始飞行</button>
-        <button class = 'stop-btn' name = '3'>停止飞行</button>
-        <button class = 'destroy-btn' name = '3'>销毁</button><br>
-        
-        <span class = 'note'>4轨道飞船：</span>
-        <button class = 'move-btn' name = '4'>开始飞行</button>
-        <button class = 'stop-btn' name = '4'>停止飞行</button>
-        <button class = 'destroy-btn' name = '4'>销毁</button><br>
-    `;
-	controlBoard.html(controlBoardCode);
 	controlBoard.addClass('control-board');
+	for (let i=0; i<4; i++) {
+		let launchBtn = $("<button class = 'launch-btn'></button>");
+		launchBtn.attr('name', i.toString())
+				 .text('发射飞船进入' + i + '轨道');
+		controlBoard.append(launchBtn);
+	}
+	for(let i=0;i<4;i++){
+		let note = $("<span class = 'note'></span>");
+		let moveBtn = $("<button class = 'move-btn'>开始飞行</button>");
+		let stopBtn = $("<button class = 'stop-btn'>停止飞行</button>");
+		let destroyBtn = $("<button class = 'destroy-btn'>销毁</button>");
+		note.text(i + '轨道飞船：');
+		moveBtn.attr('name', i.toString());
+		stopBtn.attr('name', i.toString());
+		destroyBtn.attr('name', i.toString());
+		controlBoard.append(note).append(moveBtn).append(stopBtn).append(destroyBtn);
+	}
+	
 	container.append(controlBoard);
 }
 
@@ -403,6 +390,7 @@ function Spaceship(mark) {
 
 /* -------------------------------------------程序初始化------------------------------------------ */
 function init() {
+	alert(1)
 	var container = $('#container'); //获取根容器
 	createUniverse(container); //生成宇宙背景
 	createControlBoard(container); //生成控制中心操作面板
