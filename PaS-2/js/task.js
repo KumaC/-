@@ -33,17 +33,17 @@ function createPlanet(ctx) {
 function createControlBoard(container) {
 	var controlBoard = $('<div></div>');
 	controlBoard.addClass('control-board');
-	for (let i=0; i<4; i++) {
-		let launchBtn = $("<button class = 'launch-btn'></button>");
+	for (var i=0; i<4; i++) {
+		var launchBtn = $("<button class = 'launch-btn'></button>");
 		launchBtn.attr('name', i.toString())
 				 .text('发射飞船进入' + i + '轨道');
 		controlBoard.append(launchBtn);
 	}
-	for(let i=0;i<4;i++){
-		let note = $("<span class = 'note'></span>");
-		let moveBtn = $("<button class = 'move-btn'>开始飞行</button>");
-		let stopBtn = $("<button class = 'stop-btn'>停止飞行</button>");
-		let destroyBtn = $("<button class = 'destroy-btn'>销毁</button>");
+	for(i=0;i<4;i++){
+		var note = $("<span class = 'note'></span>");
+		var moveBtn = $("<button class = 'move-btn'>开始飞行</button>");
+		var stopBtn = $("<button class = 'stop-btn'>停止飞行</button>");
+		var destroyBtn = $("<button class = 'destroy-btn'>销毁</button>");
 		note.text(i + '轨道飞船：');
 		moveBtn.attr('name', i.toString());
 		stopBtn.attr('name', i.toString());
