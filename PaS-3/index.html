@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>行星与飞船（二）</title>
+		<link href='css/task.css' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div id='container'>
+			<div class='universe'>
+				<canvas class='canvas' width='600' height='600'></canvas>
+			</div>
+			<form class='launch-board'  onselectstart="return false">
+				<span class='note'>动力系统选择: </span><br>
+
+				<label>
+					<input type='radio' name='dynamics' value='1' id='蓝色空间号' checked="checked">
+					蓝色空间号(速率30px/s，能耗5%/s)
+				</label><br>
+
+				<label>
+					<input type='radio' name='dynamics' value='2' id='万有引力号'>
+					万有引力号(速率50px/s，能耗7%/s)
+				</label><br>
+
+				<label>
+					<input type='radio' name='dynamics' value='3' id='星环号'>
+					星环号(速率500px/s，能耗8%/s)
+				</label><br>
+
+				<span class='note'>能源系统选择: </span><br>
+
+				<label>
+					<input type='radio' name='energy' value='1' id='光能型'>
+					光能型(补充能源速度2%/s)
+				</label><br>
+
+				<label>
+					<input type='radio' name='energy' value='2' id='急速型' checked="checked">
+					急速型(补充能源速度5%/s)
+				</label><br>
+
+				<label>
+					<input type='radio' name='energy' value='3' id='永久型'>
+					永久型(补充能源速度10%/s)
+				</label><br>
+
+				<input type='button' class='create-btn' value='创建飞船'><br>
+
+				<input type='button' class = 'launch-btn' name = '1' value='进入1轨道'>
+		        <input type='button' class = 'launch-btn' name = '2' value='进入2轨道'><br>
+		        <input type='button' class = 'launch-btn' name = '3' value='进入3轨道'>
+		        <input type='button' class = 'launch-btn' name = '4' value='进入4轨道'><br>
+	        </form>
+	        <form class='control-board'>
+		        <span class = 'note'>1轨道飞船：</span>
+		        <input type='button' class = 'move-btn' name = '1' value='开始飞行'>
+		        <input type='button' class = 'stop-btn' name = '1' value='停止飞行'>
+		        <input type='button' class = 'destroy-btn' name = '1' value='销毁'><br>
+
+		        <span class = 'note'>2轨道飞船：</span>
+		        <input type='button' class = 'move-btn' name = '2' value='开始飞行'>
+		        <input type='button' class = 'stop-btn' name = '2' value='停止飞行'>
+		        <input type='button' class = 'destroy-btn' name = '2' value='销毁'><br>
+
+		        <span class = 'note'>3轨道飞船：</span>
+		        <input type='button' class = 'move-btn' name = '3' value='开始飞行'>
+		        <input type='button' class = 'stop-btn' name = '3' value='停止飞行'>
+		        <input type='button' class = 'destroy-btn' name = '3' value='销毁'><br>
+
+		        <span class = 'note'>4轨道飞船：</span>
+		        <input type='button' class = 'move-btn' name = '4' value='开始飞行'>
+		        <input type='button' class = 'stop-btn' name = '4' value='停止飞行'>
+		        <input type='button' class = 'destroy-btn' name = '4' value='销毁'><br>
+			</form>
+			<table class='status-log'>
+				<th>飞船编号</th>
+				<th>动力型号</th>
+				<th>能源型号</th>
+				<th>当前状态</th>
+				<th>剩余能量</th>
+				<tr class='spaceship1'>
+					<td class='mark'></td>
+					<td class='dynamics'></td>
+					<td class='energy'></td>
+					<td class='status'></td>
+					<td class='power'></td>
+				</tr>
+				<tr class='spaceship2'>
+					<td class='mark'></td>
+					<td class='dynamics'></td>
+					<td class='energy'></td>
+					<td class='status'></td>
+					<td class='power'></td>
+				</tr>
+				<tr class='spaceship3'>
+					<td class='mark'></td>
+					<td class='dynamics'></td>
+					<td class='energy'></td>
+					<td class='status'></td>
+					<td class='power'></td>
+				</tr>
+				<tr class='spaceship4'>
+					<td class='mark'></td>
+					<td class='dynamics'></td>
+					<td class='energy'></td>
+					<td class='status'></td>
+					<td class='power'></td>
+				</tr>
+			</table>
+            
+			<div class='command-log'>
+
+			</div>
+		</div>
+        <script src = 'js/jquery-3.1.0.js'></script>
+        <script src = 'js/adapter.js'></script>
+        <script src = 'js/mediator.js'></script>
+        <script src = 'js/scene.js'></script>
+        <script src = 'js/hub.js'></script>
+        <script src = 'js/data.js'></script>
+        <script src = 'js/spaceship.js'></script>
+        <script src = 'js/log.js'></script>
+	</body>
+</html>

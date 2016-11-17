@@ -6,7 +6,61 @@
 		<link href='css/task.css' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-		<div id='container'></div>
+		<div id='container'>
+			<div class='universe'>
+				<canvas class='canvas' width='600' height='600'></canvas>
+			</div>
+			<form class='control-board'>
+				<span class='note'>动力系统选择</span>
+				
+				<input type='radio' name='dynamics' value='前进号' id='前进号'>
+				<label for='前进号'>前进号（速率30px/s，能耗5%/s）</label>
+				
+				<input type='radio' name='dynamics' value='奔腾号' id='奔腾号'>
+				<label for='奔腾号'>奔腾号（速率50px/s，能耗7%/s）</label>
+				
+				<input type='radio' name='dynamics' value='超越号' id='超越号'>
+				<label for='超越号'>超越号（速率80px/s，能耗9%/s）</label>
+				
+				<span class='note'>能源系统选择</span>
+				
+				<input type='radio' name='energy' value='劲量型' id='劲量型'>
+				<label for='劲量型'>劲量型（补充能源速度2%/s）</label>
+				
+				<input type='radio' name='energy' value='光能型' id='光能型'>
+				<label for='光能型'>光能型（补充能源速度3%/s）</label>
+				
+				<input type='radio' name='energy' value='永久型' id='永久型'>
+				<label for='永久型'>永久型（补充能源速度4%/s）</label>
+				
+				<input type='button' class='create-btn' value='创建新飞船'>
+				
+				<input type='button' class = 'launch-btn' name = '1' value='发射飞船进入1轨道'>
+		        <input type='button' class = 'launch-btn' name = '2' value='发射飞船进入2轨道'>
+		        <input type='button' class = 'launch-btn' name = '3' value='发射飞船进入3轨道'>
+		        <input type='button' class = 'launch-btn' name = '4' value='发射飞船进入4轨道'>
+		        
+		        <span class = 'note'>1轨道飞船：</span>
+		        <input type='button' class = 'move-btn' name = '1' value='开始飞行'>
+		        <input type='button' class = 'stop-btn' name = '1' value='停止飞行'>
+		        <input type='button' class = 'destroy-btn' name = '1' value='销毁'>
+		        
+		        <span class = 'note'>2轨道飞船：</span>
+		        <input type='button' class = 'move-btn' name = '2' value='开始飞行'>
+		        <input type='button' class = 'stop-btn' name = '2' value='停止飞行'>
+		        <input type='button' class = 'destroy-btn' name = '2' value='销毁'>
+		        
+		        <span class = 'note'>3轨道飞船：</span>
+		        <input type='button' class = 'move-btn' name = '3' value='开始飞行'>
+		        <input type='button' class = 'stop-btn' name = '3' value='停止飞行'>
+		        <input type='button' class = 'destroy-btn' name = '3' value='销毁'>
+		        
+		        <span class = 'note'>4轨道飞船：</span>
+		        <input type='button' class = 'move-btn' name = '4' value='开始飞行'>
+		        <input type='button' class = 'stop-btn' name = '4' value='停止飞行'>
+		        <input type='button' class = 'destroy-btn' name = '4' value='销毁'>
+			</form>
+		</div>
         <script src = 'js/jquery-1.11.0.js'></script>
         <script src = 'js/task.js'></script>
 	</body>
